@@ -124,6 +124,7 @@ public class UserMenuController implements Initializable {
     @FXML
     private void handleAddUser(ActionEvent event) throws Exception{
         Stage stage = new Stage();
+        stage.setTitle("ProcessManager");
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("sample/view/addUser.fxml"));
         stage.setScene(new Scene(loader.load(), 375, 380));
         CreatingUserController controller = loader.getController();
@@ -134,6 +135,7 @@ public class UserMenuController implements Initializable {
     @FXML
     private void handleDeleteUser(ActionEvent event) throws Exception {
         Stage stage = new Stage();
+        stage.setTitle("ProcessManager");
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("sample/view/deleteUser.fxml"));
         stage.setScene(new Scene(loader.load(), 260, 210));
         DeleteController controller = loader.getController();
@@ -145,6 +147,7 @@ public class UserMenuController implements Initializable {
     @FXML
     private void handleUpdateUser(ActionEvent event) throws Exception {
         Stage stage = new Stage();
+        stage.setTitle("ProcessManager");
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("sample/view/updateUser.fxml"));
         stage.setScene(new Scene(loader.load(), 375, 380));
         UpdateUserController controller = loader.getController();
@@ -160,6 +163,7 @@ public class UserMenuController implements Initializable {
     @FXML
     private void handleAddProcess(ActionEvent event) throws Exception {
         Stage stage = new Stage();
+        stage.setTitle("ProcessManager");
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("sample/view/addProcess.fxml"));
         stage.setScene(new Scene(loader.load(), 375, 380));
         CreateProcessController controller = loader.getController();
@@ -170,6 +174,7 @@ public class UserMenuController implements Initializable {
     @FXML
     private void handleUpdateProcess(ActionEvent event) throws Exception {
         Stage stage = new Stage();
+        stage.setTitle("ProcessManager");
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("sample/view/updateProcess.fxml"));
         stage.setScene(new Scene(loader.load(), 375, 380));
         UpdateProcessController controller = loader.getController();
@@ -195,6 +200,7 @@ public class UserMenuController implements Initializable {
     @FXML
     public void handleDeleteProcess(ActionEvent event) throws Exception {
         Stage stage = new Stage();
+        stage.setTitle("ProcessManager");
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("sample/view/deleteProcess.fxml"));
         stage.setScene(new Scene(loader.load(), 260, 210));
         DeleteController controller = loader.getController();
@@ -207,6 +213,7 @@ public class UserMenuController implements Initializable {
     @FXML
     private void handleSignOut(ActionEvent event) throws Exception {
         Stage stage = new Stage();
+        stage.setTitle("ProcessManager");
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("sample/view/signOut.fxml"));
         stage.setScene(new Scene(loader.load(), 260, 210));
         SignOutController controller = loader.getController();

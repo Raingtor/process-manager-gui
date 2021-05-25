@@ -57,6 +57,7 @@ public class CreatingUserController {
         if (createUserButton.getScene().getRoot().getId().equals("signUp")) {
             ProcessManager.setCurrentUser(user);
             Stage stage = new Stage();
+            stage.setTitle("ProcessManager");
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/view/userMenu.fxml"));
             stage.setScene(new Scene(root, 600, 400));
             stage.show();

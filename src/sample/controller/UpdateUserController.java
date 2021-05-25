@@ -35,6 +35,7 @@ public class UpdateUserController {
         if (Administrator.getUsers().stream().filter(it ->
                 it.getName().equals(userName)).count() != 0) {
             Stage stage = new Stage();
+            stage.setTitle("ProcessManager");
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/view/userNameIsUsed.fxml"));
             stage.setScene(new Scene(root, 375, 380));
             stage.show();

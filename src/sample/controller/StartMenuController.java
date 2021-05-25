@@ -32,23 +32,26 @@ public class StartMenuController {
         ).findFirst().orElse(null);
         if (user == null) {
             Stage stage = new Stage();
+            stage.setTitle("ProcessManager");
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/view/userNotFound.fxml"));
             stage.setScene(new Scene(root, 250, 200));
             stage.show();
         } else {
             ProcessManager.setCurrentUser(user);
             Stage stage = new Stage();
+            stage.setTitle("ProcessManager");
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/view/userMenu.fxml"));
             stage.setScene(new Scene(root, 600, 400));
             stage.show();
+            signUpButton.getScene().getWindow().hide();
         }
-        signUpButton.getScene().getWindow().hide();
     }
 
     @FXML
     private void clickSignUp(ActionEvent event) throws Exception{
         signUpButton.getScene().getWindow().hide();
         Stage stage = new Stage();
+        stage.setTitle("ProcessManager");
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample/view/signUp.fxml"));
         stage.setScene(new Scene(root, 375, 380));
         stage.show();

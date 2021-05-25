@@ -2,15 +2,19 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane id="updateProcess" fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="381.0" prefWidth="375.0" style="-fx-background-color: E1E9FF;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.UpdateProcessController">
     <children>
-        <TextField fx:id="priorityField" layoutX="113.0" layoutY="255.0" promptText="Приоритет" />
-        <Button fx:id="updateProcessButton" layoutX="151.0" layoutY="311.0" mnemonicParsing="false" onAction="#click" text="Создать"/>
-        <ComboBox fx:id="statusComboBox" layoutX="111.0" layoutY="81.0" prefWidth="150.0" promptText="Статус"/>
-        <TextField fx:id="typeField" layoutX="111.0" layoutY="137.0" promptText="Тип"/>
-        <TextField fx:id="processTimeField" layoutX="111.0" layoutY="197.0" promptText="Процессорное время"/>
+        <TextField fx:id="priorityField" layoutX="166.0" layoutY="255.0" />
+        <Button fx:id="updateProcessButton" layoutX="211.0" layoutY="310.0" mnemonicParsing="false" onAction="#click" text="Обновить" />
+        <ComboBox fx:id="statusComboBox" layoutX="166.0" layoutY="85.0" prefWidth="150.0" promptText="Статус" />
+        <TextField fx:id="typeField" layoutX="166.0" layoutY="137.0" />
+        <TextField fx:id="processTimeField" layoutX="166.0" layoutY="197.0" />
+        <Label id="typeLabel" layoutX="15.0" layoutY="141.0" text="Тип" />
+        <Label id="processTimeLabel" layoutX="14.0" layoutY="201.0" text="Процессорное время" />
+        <Label id="priorityLabel" layoutX="15.0" layoutY="259.0" text="Приоритет" />
     </children>
 </AnchorPane>
