@@ -1,0 +1,26 @@
+package sample;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class Main extends Application {
+
+    public static ProcessManager processManager;
+
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("view/startMenu.fxml"));
+        primaryStage.setTitle("ProcessManager");
+        primaryStage.setScene(new Scene(root, 350, 350));
+        primaryStage.show();
+        processManager = new ProcessManager();
+    }
+
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}

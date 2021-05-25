@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:id="root" fx:controller="sample.controller.UserMenuController">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: E1E9FF;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab id="userTab" text="Пользователи">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label id="greeting" fx:id="greeting" layoutX="14.0" layoutY="14.0" />
+                        <Button id="updateUserButton" fx:id="updateUserButton" layoutX="278.0" layoutY="323.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0"
+                        onAction="#handleUpdateUser">
+                           <graphic>
+                              <ImageView id="updateUserButton" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/refresh.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button id="deleteUserButton" fx:id="deleteUserButton" layoutX="327.0" layoutY="323.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="36.0"
+                        onAction="#handleDeleteUser">
+                           <graphic>
+                              <ImageView id="deleteUserButton" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/delete.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TableView id="userTable" fx:id="userTable" layoutX="9.0" layoutY="47.0" prefHeight="260.0" prefWidth="580.0" />
+                        <Button id="addUserButton" fx:id="addUserButton" layoutX="228.0" layoutY="323.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0"
+                        onAction="#handleAddUser">
+                           <graphic>
+                              <ImageView id="addUserButton" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/add.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button id="signOutButton" fx:id="signOutButton" layoutX="278.0" layoutY="6.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="36.0"
+                        onAction="#handleSignOut">
+                           <graphic>
+                              <ImageView id="signOutButton" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/logout.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab id="processTab" text="Процессы">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView id="processTable" fx:id="processTable" layoutX="9.0" layoutY="47.0" prefHeight="260.0" prefWidth="580.0" />
+                        <Button id="updateProcessButton" fx:id="updateProcessButton" layoutX="227.0" layoutY="323.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="36.0"
+                        onAction="#handleUpdateProcess">
+                           <graphic>
+                              <ImageView id="updateProcessButton" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/refresh.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button id="stopProcessButton" fx:id="stopProcessButton" layoutX="375.0" layoutY="323.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="36.0"
+                        onAction="#handleStopProcess">
+                           <graphic>
+                              <ImageView id="stopProcessButton" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/pause.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button id="startProcessButton" fx:id="startProcessButton" layoutX="326.0" layoutY="323.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="36.0"
+                        onAction="#handleStartProcess">
+                           <graphic>
+                              <ImageView id="startProcessButton" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/play.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button id="deleteProcessButton" fx:id="deleteProcessButton" layoutX="278.0" layoutY="323.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="36.0"
+                        onAction="#handleDeleteProcess">
+                           <graphic>
+                              <ImageView id="deleteProcessButton" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/delete.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button id="addProcessButton" fx:id="addProcessButton" layoutX="179.0" layoutY="323.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="36.0"
+                        onAction="#handleAddProcess">
+                           <graphic>
+                              <ImageView id="addProcessButton" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/add.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
